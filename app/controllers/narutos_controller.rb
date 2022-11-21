@@ -1,6 +1,6 @@
 class NarutosController < ApplicationController
   before_action :authorize, only: %i[create update destroy]
-  before_action :set_naruto, only: %i[ show update destroy ]
+  before_action :set_naruto, only: %i[ show create update destroy ]
 
   # GET /narutos
   def index

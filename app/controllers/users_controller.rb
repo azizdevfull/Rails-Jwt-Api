@@ -1,13 +1,12 @@
 class UsersController < ApplicationController
     def create
         @user = User.create(user_params)
-
         if @user.valid?
-            token = encode_token({user_id: @user.id})
-            render json: {user: @user, token: token}, status: :ok
+           
+            token = encode_token({ user_id: @user.id })
+            render json: { user: @user, token: token }, status: :ok
         else
-            render json: {error: "Something went wrong"}, 
-            status: :unprocessable_entity
+            render json: { error: 'Invalid username or password' }, status: :unprocessable_entity
         end
     end
     def login
@@ -16,13 +15,12 @@ class UsersController < ApplicationController
             token = encode_token({user_id: @user.id})
             render json: {user: @user, token: token}, status: :ok
         else
-            render json: {error: "Something went wrong"}, 
+            render json: {error: "username or password wrong"}, 
             status: :unprocessable_entity
         end
         
     end
-    
-    
+
     private
 
     def user_params
