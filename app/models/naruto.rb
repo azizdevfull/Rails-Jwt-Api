@@ -1,0 +1,2 @@
+class Naruto < ApplicationRecord
+end
