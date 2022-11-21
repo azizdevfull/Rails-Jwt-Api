@@ -5,3 +5,14 @@
 #
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
+20.times do
+    @narutos = Naruto.new(
+        character: Faker::JapaneseMedia::Naruto.character,
+        village: Faker::JapaneseMedia::Naruto.village,
+        eye: Faker::JapaneseMedia::Naruto.eye
+        
+    )
+
+    @narutos.save
+
+end
