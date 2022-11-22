@@ -1,5 +1,5 @@
 #Api Jwt
 #installation
 ```
-bundle install
+bundle instal
 ```
