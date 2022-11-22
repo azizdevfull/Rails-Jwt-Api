@@ -1,5 +1,10 @@
-#Api Jwt
-#installation
+# Api Jwt
+
+# installation
 ```
 bundle install
+```
+# usage
+```
+rails server
 ```
